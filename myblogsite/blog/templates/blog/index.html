@@ -11,10 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link
-    rel="stylesheet" 
-    href="{% static '/style/style.css'%}"
-    >
+    <link rel="stylesheet" href="{% static '/style/style.css'%}" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"
@@ -39,12 +36,92 @@
       </p>
     </header>
     <!-- this is where, we will have the main section of the page like, the blog that will be created by individuals -->
-    <div class="body-social-media">
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-github"></i>
-      <i class="bi bi-linkedin"></i>
+
+    <!-- topic section -->
+    <div class="topic">
+      <div class="topic-box">
+        <div class="topic-header">
+          <a href="#"
+            >Topics
+            <hr />
+          </a>
+          <span class="close">
+            <a href="#"><i class="bi bi-x-circle-fill"></i></a>
+          </span>
+        </div>
+        <div class="topic-options">
+          <a href="#" class="black">tech</a>
+          <a href="#">tech</a>
+          <a href="#">tech</a>
+          <a href="#">tech</a>
+        </div>
+      </div>
+
+      <div class="topics-show rotate">Article</div>
     </div>
+
+    <!-- blog context -->
+    <div class="blog-window container" id="blog">
+      <div class="articles">
+        <div class="article-box">
+          <h2 class="article-topic">TOPIC</h2>
+          <p class="article-context">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id
+            semper risus in. Ac auctor augue mauris augue neque gravida in
+            fermentum et. Ac turpis egestas integer eget aliquet nibh praesent.
+            Dui ut ornare lectus sit.Condimentum vitae sapien pellentesque
+            habitant morbi tristique senectus.
+          </p>
+        </div>
+        <div class="article-img">
+          <img
+            src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg"
+            alt="article-img"
+          />
+        </div>
+      </div>
+      <div class="articles">
+        <div class="article-box">
+          <h2 class="article-topic">TOPIC</h2>
+          <p class="article-context">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id
+            semper risus in. Ac auctor augue mauris augue neque gravida in
+            fermentum et. Ac turpis egestas integer eget aliquet nibh praesent.
+            Dui ut ornare lectus sit.Condimentum vitae sapien pellentesque
+            habitant morbi tristique senectus.
+          </p>
+        </div>
+        <div class="article-img">
+          <img
+            src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg"
+            alt="article-img"
+          />
+        </div>
+      </div>
+      <div class="articles">
+        <div class="article-box">
+          <h2 class="article-topic">TOPIC</h2>
+          <p class="article-context">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id
+            semper risus in. Ac auctor augue mauris augue neque gravida in
+            fermentum et. Ac turpis egestas integer eget aliquet nibh praesent.
+            Dui ut ornare lectus sit.Condimentum vitae sapien pellentesque
+            habitant morbi tristique senectus.
+          </p>
+        </div>
+        <div class="article-img">
+          <img
+            src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg"
+            alt="article-img"
+          />
+        </div>
+      </div>
+     
+    </div>
+
     <!-- footer-section of the section of the page -->
     {% include 'blog/footer.html'%}
 
