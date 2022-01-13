@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %} {% block content %}
+
+<br />
+<div class="blog-window container">
+  <div class="article-box">
+    <div class="details-article text-center">
+      <div class="text-center">
+        <div class="">
+          <h1>{{ blog.title }}</h1>
+
+          <h2>--- {{ blog.date|date:'F jS Y' }} ---</h2>
+
+          {{ blog.description|safe }}
+        </div>
+        <div><img src="{{blog.image.url}}" /></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
