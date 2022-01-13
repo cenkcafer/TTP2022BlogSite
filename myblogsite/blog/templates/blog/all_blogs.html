@@ -31,7 +31,7 @@
     <div class="topic-options">
       {% for blog in blogs %}
       <a href="{% url 'blog:detail' blog.id %}">
-        <h2 class="article-topic">{{ blog.title }}</h2></a>
+        <p class="article-topic">{{ blog.title }}</p></a>
       {% endfor %}
     </div>
   </div>
