@@ -1,25 +1,15 @@
-{% extends 'blog/base.html' %} {% block content %} 
-
-<div class="topic">
-  <div class="topic-box">
-    <div class="topic-header">
-      <a href="#">Topics<hr /></a>
-      <span class="close">
-        <a href="#"><i class="bi bi-x-circle-fill"></i></a>
-      </span>
+{% extends 'blog/base.html' %} {% block content %} {% for blog in blogs %}
+<!-- <div class='blog-window container'>
+    <div class='article-box'>
+        <div class= 'articles'>
+            <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+            <h5>{{ blog.date|date:'M d Y' }}</h5>
+            <img src="{{blog.image.url}}"/>
+            <p>{{ blog.description|striptags|truncatechars:300 }}</p>
+        </div>
     </div>
-    <div class="topic-options">
-      {% for blog in blogs %}
-        <a href="{% url 'blog:detail' blog.id %}">
-        <h2 class="article-topic">{{ blog.title }}</h2></a>
-        {% endfor %}
-    </div>
-  </div>
-
-  <div class="topics-show rotate">Article</div>
 </div>
-
-{% for blog in blogs %}
+     -->
 
 <div class="blog-window container" id="blog">
   <div class="articles">
@@ -36,6 +26,5 @@
     </div>
   </div>
 </div>
-
 
 {% endfor %} {% endblock %}
