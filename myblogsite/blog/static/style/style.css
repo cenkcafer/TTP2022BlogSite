@@ -44,7 +44,7 @@ header {
   gap: 1rem;
 }
 .article-box {
-  height: 20rem;
+  
   /* box-shadow: 3px 5px 2px 2px; */
 }
 
@@ -58,15 +58,35 @@ header {
   height: 100%;
   
 }
-.article-window{
-  border: solid;
-}
-
-.articles img {
-  width: 100%;
+.details-article{
+  padding: 2.5rem;
+  background-color: #f7f7f7;
+  box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
+  border-radius: 5px;
   height: 100%;
+  
+}
+.details-article img {
+  width: 30rem;
+  height: 30rem;
+
 }
 
+
+.article-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.articles img {
+  width: 20rem;
+  height: 20rem;
+  
+}
+
+
+/* css for the topic options */
 /* css for the topic options */
 .topic {
   position: fixed;
@@ -81,6 +101,7 @@ header {
   margin: 0;
   padding: 0;
   color: #ece9e9 !important;
+  
 }
 
 .topic-options {
@@ -88,13 +109,13 @@ header {
   flex-direction: column;
   text-align: center;
 }
-.topic-options a {
-  padding: 0.2rem;
-  transition: all 0.2s ease-in-out;
+.topic-options a{
+  padding: .2rem;
+  transition: all .2s ease-in-out;
 }
-.topic-options a:hover {
+.topic-options a:hover{
   background-color: rgb(70, 68, 68);
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .close {
   position: absolute;
@@ -114,7 +135,9 @@ header {
 }
 .topics-show {
   transition: all 0.5s ease-in-out;
+  
 }
+
 
 .rotate {
   transform: rotate(-90deg);
@@ -124,19 +147,24 @@ header {
   background-color: rgb(43, 42, 42);
   color: #ece9e9;
   border-radius: 0 0 5px 5px;
-  padding: 0 0.5rem;
+  padding: 0 .5rem;
   font-size: larger;
+
 }
 
 .show {
+  
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
 
 .dont-show {
+  
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
+
+
 
 /* about section */
 
