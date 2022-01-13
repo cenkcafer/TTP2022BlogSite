@@ -1,3 +1,4 @@
+import profile
 from django.shortcuts import render,  get_object_or_404
 from django.http import HttpResponse
 from .models import Blog
@@ -47,5 +48,100 @@ def contact(request):
 
 
 
+profiles = [
+    
+    #management
+    {'name':'Ege Kacmaz',
+     'image':'',
+    'gitlink':'https://github.com/iamege',
+    'gender':'female'
+    
+     },
+    {'name':'Syeda Kazmi',
+     'image':'',
+    'gitlink':'https://github.com/iamege',
+    'gender':'female'
+     },
+    {'name':'Hilal Avci',
+     'image':'',
+    'gitlink':'https://github.com/hilal212',
+    'gender':'female'
+     },
+    
+    #back-end
+    {'name':'Michael Janus',
+     'image':'',
+    'gitlink':'https://github.com/bluemike61',
+   
+     },
+    {'name':'Humayun Ahmed',
+     'image':'',
+    'gitlink':'https://github.com/ahmed-humayun',
+    
+     },
+    {'name':'Ankit Kafle',
+     'image':'',
+    'gitlink':'https://github.com/ankitkafle1',
+   
+     },
+    
+    #front-end
+    {'name':'Robert Quartey',
+     'image':'',
+    'gitlink':'https://github.com/robertquartey7',
+    
+     },
+    {'name':'Cenk Cafer',
+     'image':'',
+    'gitlink':'https://github.com/cenkcafer',
+    
+     },
+    {'name':'Michael Coleman',
+     'image':'',
+    'gitlink':'https://github.com/mic4x',
+    
+     },
+    {'name':'Sheikh Ahmed',
+     'image':'',
+    'gitlink':'https://github.com/SHEIKHIA',
+    
+     },
+    {'name':'Chistopher Ortega',
+     'image':'',
+    'gitlink':'https://github.com/chrisortega1928',
+   
+     },
+    {'name':'Gabriel Tejadaa',
+     'image':'',
+    'gitlink':'https://github.com/gabrielt1101',
+    
+     },
+    {'name':'Jeryel Blanco',
+     'image':'',
+    'gitlink':'',
+    
+     },
+    {'name':'Lamarana Diallo',
+     'image':'',
+    'gitlink':'https://github.com/diallolamarana',
+    
+     },
+    {'name':'Md Redoy',
+     'image':'',
+    'gitlink':'https://github.com/MdXRedoy',
+   
+     },
+    {'name':'Nanami Inaba',
+     'image':'',
+    'gitlink':'https://github.com/mc5rgspider',
+    'gender':'female'
+     },
+    
+    
+]
+
+\
+
 def about(request):
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html', {'cards':profiles})
+
