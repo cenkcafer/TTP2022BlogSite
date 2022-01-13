@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% for blog in blogs %}
+<div class='blog-window container'>
+    <div class='article-box'>
+        <div class= 'articles'>
+            <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+            <h5>{{ blog.date|date:'M d Y' }}</h5>
+            <img src="{{blog.image.url}}"/>
+            <p>{{ blog.description|striptags|truncatechars:100 }}</p>
+        </div>
+    </div>
+</div>
+    
+{% endfor %}
+
+{% endblock %}
