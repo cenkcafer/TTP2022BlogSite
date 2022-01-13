@@ -33,7 +33,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 2px 2px 5px 2.5px;
+  box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
   border-radius: 5px;
 }
 
@@ -52,11 +52,14 @@ header {
   padding: 2.5rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: rgb(221, 220, 220);
-  box-shadow: 3px 5px 2px 2px;
+  background-color: #f7f7f7;
+  box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
   border-radius: 5px;
   height: 100%;
   
+}
+.article-window{
+  border: solid;
 }
 
 .articles img {
