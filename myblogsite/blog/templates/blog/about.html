@@ -1,0 +1,30 @@
+
+{% extends 'blog/base.html' %} {% block content %}
+{% load static%}
+    <!-- <div class="about container">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div> -->
+
+    <div class="flip-card container">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'images/robert_avatar.PNG'%}" alt="Avatar" style="width:300px;height:300px;">
+           
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1> 
+            <p>Architect & Engineer</p> 
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+
+{% endblock %}

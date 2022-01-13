@@ -45,3 +45,7 @@ def contact(request):
     form = ContactForm()
     return render(request, 'blog/contact.html', {'form' : form})
 
+
+
+def about(request):
+    return render(request, 'blog/about.html')

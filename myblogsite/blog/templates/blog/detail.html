@@ -1,20 +1,17 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/base.html' %} {% block content %}
 
-{% block content %}
+<br />
+<div class="blog-window container">
+  <div class="article-box">
+    <div class="articles">
+      <h1>{{ blog.title }}</h1>
 
-<br>
-<div class='blog-window container'>
-    <div class='article-box'>
-        <div class= 'articles'>
-<h1>{{ blog.title }}</h1>
+      <h2>--- {{ blog.date|date:'F jS Y' }} ---</h2>
 
-<h2>--- {{ blog.date|date:'F jS Y' }} ---</h2>
-
-{{ blog.description|safe }}
-<img src="{{blog.image.url}}"/>
-
-        </div>
+      {{ blog.description|safe }}
+      <img src="{{blog.image.url}}" />
     </div>
+  </div>
 </div>
 
 {% endblock %}
