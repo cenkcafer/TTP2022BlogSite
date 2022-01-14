@@ -1,20 +1,15 @@
-
-{% extends 'blog/base.html' %} {% block content %}
-
-
-<div class="container text-center">
-    <div style="margin:80px">
-        <h1 class="header-title">Contact Us</h1>
-        <p header-paragraph>
-            <form method="POST">
+{% extends 'blog/base.html' %} {% block content %} {#%  inheriate from the header file  block start %#}
+<div class="container text-center"> {#% creating overlap class and putting text in center.   %#}
+    <div style="margin:80px"> {#% in line style    %#}
+        <h1 class="header-title">Contact Us</h1> {#%  header title print as H1  %#}
+        <p header-paragraph> {#%  header paragraph   %#}
+            <form method="POST"> {#%  declear form to collect and method is posting  %#}
                 {% csrf_token %}
-                    {{form.as_p}}
-                    <button type="submit">Submit</button>
+                    {{form.as_p}} {#% {{is posting on console}}   %#}
+                    <button type="submit">Submit</button> {#%  submitting data to the location  %#}
             </form>
         </p>
-        
-    </div>
+    </div>{#%    %#}
 </div>
-
-
 {% endblock %}
+{#%   block end  %#}
