@@ -1,21 +1,17 @@
-{% extends 'blog/base.html' %} {% block content %}
-
+{% extends 'blog/base.html' %} {% block content %} {#% block inheriate from parents   %#}
 <br />
-<div class="blog-window container">
+<div class="blog-window container"> {#%  class decleration of overlay container %#}
   <div class="article-box">
     <div class="details-article text-center">
       <div class="text-center">
         <div class="">
-          <h1>{{ blog.title }}</h1>
-
-          <h2>--- {{ blog.date|date:'F jS Y' }} ---</h2>
-
-          {{ blog.description|safe }}
+          <h1>{{ blog.title }}</h1> {#%  print title %#}
+          <h2>--- {{ blog.date|date:'F jS Y' }} ---</h2>  {#%  print fate following by formate %#}
+          {{ blog.description|safe }} {#%  print description safe is for escape for Html %#}
         </div>
         <div><img src="{{blog.image.url}}" /></div>
       </div>
     </div>
   </div>
 </div>
-
-{% endblock %}
+{% endblock %} {#%  block end  %#}
