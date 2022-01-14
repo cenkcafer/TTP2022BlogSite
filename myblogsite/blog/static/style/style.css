@@ -1,177 +1,275 @@
+/* Padding and border are included in the width and height */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #f7f7f7 !important;
-  position: relative;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-}
-a {
-  color: black !important;
-}
-
-a,
-ul,
-li {
-  text-decoration: none;
-  list-style: none;
-}
-.link-hover {
-  transition: all 0.5s ease-in-out;
-}
-.link-hover:hover {
-  background-color: #6e6d6c;
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-}
-
-header {
-  height: 25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
-  border-radius: 5px;
-}
-
-.blog-window {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.articles {
-  padding: 2.5rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  background-color: #f7f7f7;
-  box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
-  border-radius: 5px;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+​
+  /* body's background color is #f7f7f7 and prioritized anytime
+     All body elements is positioned relative to its normal position 
+     Minimum height of all body elements is 100 viewport height 
+     Add a smooth scrolling effect */
+  body {
+    background-color: #f7f7f7 !important;
+    position: relative;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+​
+/* All text's color is set to black and prioritized anytime */
+  a {
+    color: black !important;
+  }
   
-}
-.details-article{
-  padding: 2.5rem;
-  background-color: #f7f7f7;
-  box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
-  border-radius: 5px;
-  height: 100%;
+/* All a, ul, li elements has no text decoration 
+    nor specific type of list-item marker in a list.*/
+  a,
+  ul,
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
   
-}
-.details-article img {
-  width: 30rem;
-  height: 30rem;
-
-}
-
-
-.article-img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* All elements in link-hover class has
+    transition effect with a slow start and end*/
+  .link-hover {
+    transition: all 0.5s ease-in-out;
+  }
+​
+  /* For all elements in link-hover class, when hovered, 
+    background becomes #6e6d6c
+    border radius defines the radius of the element's corners
+    transition effect with a slow start and end*/
+  .link-hover:hover {
+    background-color: #6e6d6c;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
   
-}
-.articles img {
-  width: 20rem;
-  height: 20rem;
+  /* Displays all header element as a block-level flex container
+    The flexible items are displayed vertically, as a column
+    All header items will have equal space around them
+    Attaches shadows
+    Border radius defines the radius of the element's corners
+  */
+  header {
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
+    border-radius: 5px;
+  }
   
-}
-
-
-/* css for the topic options */
-.topic {
-  position: fixed;
-  top: calc((50vh - 50%) * -1);
-  transform: translate(0, calc(50vh - 50%));
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  position: fixed;
-  width: 10rem;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  color: #ece9e9 !important;
-  cursor: pointer;
-
-}
-
-.topic-options {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.topic-options a{
-  padding: .2rem;
-  transition: all .2s ease-in-out;
-}
-.topic-options a:hover{
-  background-color: rgb(70, 68, 68);
-  transition: all .2s ease-in-out;
-}
-.close {
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  transition: all 0.5s ease-in-out;
-}
-
-.topic-box {
-  opacity: 0;
-  background-color: rgb(214, 213, 213);
-  transition: all 0.5s ease-in-out;
-  padding: 1rem 0;
-  border-radius: 0 5px 5px 0;
-  box-shadow: 5px 5px 5px 5px rgb(56, 55, 55);
-}
-.topics-show {
-  transition: all 0.5s ease-in-out;
+  /* Sets the top margin
+    Displays all element in blog-window class as a block-level flex container
+    The flexible items are displayed vertically, as a column
+    Set the gap between rows and columns to 1rem
+    */
+  .blog-window {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   
-}
-
-
-.rotate {
-  transform: rotate(-90deg);
-  margin-left: -22px;
-  display: flex;
-  align-self: flex-start;
-  background-color: rgb(43, 42, 42);
-  color: #ece9e9;
-  border-radius: 0 0 5px 5px;
-  padding: 0 .5rem;
-  font-size: larger;
-
-}
-
-.show {
+  /* Generate space around all element in articles class
+    Display as a block-level grid container
+    Make a 2 columns grid container
+    Background color is #f7f7f7
+    Attaches shadows
+    Border radius defines the radius of the element's corners
+    */
+  .articles {
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #f7f7f7;
+    box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
+    border-radius: 5px;
+    height: 100%;
+    
+  }
+​
+  /* Generate space around all element in details-article class
+    Background color is #f7f7f7
+    Attaches shadows
+    Border radius defines the radius of the element's corners
+  */
+  .details-article{
+    padding: 2.5rem;
+    background-color: #f7f7f7;
+    box-shadow: 2px 2px 10px 2.5px rgb(20, 20, 20);
+    border-radius: 5px;
+    height: 100%;
+    
+  }
+​
+  /* Set width and height */
+  .details-article img {
+    width: 30rem;
+    height: 30rem;
   
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-
-.dont-show {
+  }
   
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-
-
-/* about section */
-
-.display{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-/* footer */
-
-footer {
-  margin-top: 5rem;
-  text-align: center;
-}
+  /* Displays all element in article-img class as a block-level flex container
+    Items are positioned in the center of the container
+    Center the alignments for all the items */
+  .article-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+​
+  /* Set width and height */
+  .articles img {
+    width: 20rem;
+    height: 20rem;
+    
+  }
+  
+  
+  /* css for the topic options */
+  /* All element in topic class 
+    always stays in the same place even if the page is scrolled
+    Set the top edge 
+    Apply 2D transformation
+    Displays all element in topic class as a block-level flex container
+    The flexible items are displayed vertically, as a column
+    Generate space around all element
+    Set width
+    Centers the text
+    All text's color is set to #ece9e9 and prioritized anytime
+    The cursor is a pointer and indicates a link
+    */
+  .topic {
+    position: fixed;
+    top: calc((50vh - 50%) * -1);
+    transform: translate(0, calc(50vh - 50%));
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    position: fixed;
+    width: 10rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #ece9e9 !important;
+    cursor: pointer;
+  
+  }
+  
+  /* Displays all element in topic-options class as a block-level flex container
+    The flexible items are displayed vertically, as a column
+    Centers the text
+  */
+  .topic-options {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+​
+  /*
+    Generate space
+    Transition effect
+    */
+  .topic-options a{
+    padding: .2rem;
+    transition: all .2s ease-in-out;
+  }
+​
+  /*
+    Background color is specified
+    Transition effect
+  */
+  .topic-options a:hover{
+    background-color: rgb(70, 68, 68);
+    transition: all .2s ease-in-out;
+  }
+​
+  /*
+    The element is positioned relative to its first positioned (not static)
+    Set right margin edge
+    Set top margin edge
+    Transition effect
+    */
+  .close {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /*
+    Background color is specified
+    Transition effect
+    Generate space
+    Border radius defines the radius of the element's corners
+    Attaches shadows
+  */
+  .topic-box {
+    opacity: 0;
+    background-color: rgb(214, 213, 213);
+    transition: all 0.5s ease-in-out;
+    padding: 1rem 0;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 5px 5px 5px rgb(56, 55, 55);
+  }
+​
+  /* Transition effect */
+  .topics-show {
+    transition: all 0.5s ease-in-out;
+    
+  }
+  
+  /*
+    Apply 2D transformation
+    Displays all element as a block-level flex container
+    Background color is specified
+    Text color is spcified
+    Border radius defines the radius of the element's corners
+    */
+  .rotate {
+    transform: rotate(-90deg);
+    margin-left: -22px;
+    display: flex;
+    align-self: flex-start;
+    background-color: rgb(43, 42, 42);
+    color: #ece9e9;
+    border-radius: 0 0 5px 5px;
+    padding: 0 .5rem;
+    font-size: larger;
+  
+  }
+  
+  /*Transition effect*/
+  .show {
+    
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /*Transition effect*/
+  .dont-show {
+    
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  
+  
+  /* about section */
+  
+  .display{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  /* footer */
+  
+  footer {
+    margin-top: 5rem;
+    text-align: center;
+  }
